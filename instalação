@@ -1,0 +1,28 @@
+particionamento:
+
+200MB  /boot/efi fat32
+2GB swap
+resto do disco  /  ext4
+
+root::voidlinux
+void-installer
+
+base images
+The base images provide only a minimal set of packages to install a usable Void system. These base packages are only those needed to configure a new machine, update the system, and install additional packages from repositories.
+
+trocal o shell para o bash
+chsh -s /bin/bash
+
+atualizar o sistema
+
+xbps-install -Syu
+
+atualizar o xbps
+
+xbps-install -u xbps
+
+xbps-install -Syu
+
+instalar a interface gráfica
+mate
+xbps-install -Sv xorg mate mate-extra upower0 vim nano xterm neofetch firefox-esr 
